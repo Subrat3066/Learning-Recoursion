@@ -1,3 +1,6 @@
+//DATE : 28-02-2026
+
+
 import java.util.*;
 
 public class fibonacci{
@@ -8,7 +11,7 @@ public class fibonacci{
         System.out.print(c+" ");
         fibo(n -1 , b , c , c);
     }
-    
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
