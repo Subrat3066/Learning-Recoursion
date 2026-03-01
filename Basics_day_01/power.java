@@ -2,12 +2,29 @@
 
 import java.util.*;
 
+// Height of stact is O(n)
 public class power{
     public static int calcPower(int x , int n)
     {
         if(n == 1)return x;
 
         return x * calcPower(x , n-1);
+    }
+
+// Height of stact is O(log n)
+
+    public static int calcPowerOptimized(int x , int n)
+    {
+        if(n == 1)return x;
+
+        if(n % 2 == 0)
+        {
+            return calcPowerOptimized(x , n/2) * calcPowerOptimized(x , n/2);
+        }
+        else
+        {
+            return x * calcPowerOptimized(x , n/2) * calcPowerOptimized(x , n/2);
+        }
     }
 
     public static void main(String[] args) {
@@ -22,6 +39,6 @@ public class power{
             System.out.print("X to the power n is : "+1);
             return;
         }
-        System.out.print("X to the power n is : "+calcPower(x , n));
+        System.out.print("X to the power n is : "+calcPowerOptimized(x, n));
     }
 }
