@@ -10,6 +10,7 @@ public class towerOfHanoi{
         System.out.println("Transfer disk "+ n + " from " + src + " to " + d);
         solve(n-1 , help , src , d);
     }
+
     
     public static void main(String[] args) {
         solve(3 , "S" , "H" , "D");
